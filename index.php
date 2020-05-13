@@ -10,7 +10,7 @@
 	<a href="admin" align="right"> Admin Login </a> <br>
 	-->
 	<br><form align="center" method="POST">
-	<div>
+	<div style="background: White">
 		<label style="size: 100px;"> Username: </label>
 		<input type="text" align="center" placeholder="Enter Username" name="username" required><br><br><br>
 		<label>Password: </label>
