@@ -1,3 +1,6 @@
+<?php
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,4 +11,21 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    
+<form action=" " method="post" enctype="multipart/form-data">
+<input type="file" name="upload" value=""/>
+<input type="submit" name="submit" value="Upload file"/>
+
+</form>
+
+
+</body>
+</html>
+<?php
+
+
+$filename = $_FILES["upload"]["name"];
+$tempname = $_FILES["upload"]["[tmp_name"];
+$folder="../dataimg/".$filename;
+echo $folder;
+move_uploaded_file($tempname,$folder);
+?>
