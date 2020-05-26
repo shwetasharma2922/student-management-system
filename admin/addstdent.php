@@ -20,6 +20,41 @@
     width:50%;
     align:center;
 }
+
+#button {   
+       background-color: #4CAF50;   
+       width: 50%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+		 }  
+		 
+	 form {   
+		 
+		border: 3px solid #f1f1f1; 
+		padding-left:30%;  
+    	}   
+		input[type=text], input[type=file] {   
+        width: 50%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 3px solid green;   
+        box-sizing: border-box;   
+    }  
+ #button:hover {   
+        opacity: 0.7;   
+	}   
+	.container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+    label{
+      
+       color:  green;
+    }
 </style>
 </head>
 <body>
@@ -31,21 +66,21 @@
 </div>   
 <form method="post" action="addstdent.php" enctype="multipart/form-data">
 
-
-<label>Roll No</label>
-<input type="text" name="rollno" placeholder="Enter Rollno" /><br>
-<label>Full Name</label>
-<input type="text" name="name" placeholder="Enter Full Name" /><br>
-<label>City</label>
-<input type="text" name="city" placeholder="Enter City" /><br>
-<label>Contact No.</label>
-<input type="text" name="pcon" placeholder="Enter the Contact No." /><br>
-<label>Class</label>
-<input type="text" name="class" placeholder="Enter Class" /><br>
-<label>Image</label>
-<input type="file" name="simg" /><br>
-
-<input type="submit" name="submit" />
+<h2>
+<label>Roll No</label><br>
+<input type="text" name="rollno" placeholder="Enter Rollno" required="required" /><br>
+<label>Full Name</label><br>
+<input type="text" name="name" placeholder="Enter Full Name" required="required" /><br>
+<label>City</label><br>
+<input type="text" name="city" placeholder="Enter City" required="required" /><br>
+<label>Contact No.</label><br>
+<input type="text" name="pcon" placeholder="Enter the Contact No."  required="required" /><br>
+<label>Class</label><br>
+<input type="text" name="class" placeholder="Enter Class" required="required" /><br>
+<label>Image</label><br>
+<input type="file" name="simg" required="required" /><br>
+</h2>
+<input type="submit" name="submit" id="button"  />
 </form> 
     </body>
 </html>

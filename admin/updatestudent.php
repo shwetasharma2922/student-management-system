@@ -1,7 +1,3 @@
-<?php
-error_reporting(0);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,12 +27,12 @@ error_reporting(0);
 <h1> ADMIN DASHBOARD</h1>
 
 </div>  
-<div Style="align: 'center';"> 
-<form method="post" action="upatestudent.php" enctype="multipart/form-data">
+<div > 
+<form method="post" action="updatestudent.php" enctype="multipart/form-data" align="center">
 <label>Enter Class</label>
 <input type="text" name="class" placeholder="Enter Class" required="required"/>
 <label>Enter Name of Student</label>
-<input type="text" name="stuname" placeholder="Enter Student Name" required="required"/>
+<input type="text" name="name" placeholder="Enter Student Name" required="required"/>
 
 <input type="submit" name="submit" value="Search" />
 
@@ -55,12 +51,11 @@ if(isset($_POST['submit']))
 {
 include('../dbcon.php');
 
-$class = $_POST('class');
-$name = $_POST('stuname');
-$qry= "SELECT * FROM 'student1' WHERE 'class' = '$class' AND 'name' LIKE '%$name%'";
+$class = $_POST['class'];
+$name = $_POST['name'];
+$qry= "SELECT * FROM student1 WHERE class='$class' AND name LIKE '%$name%'";
 $run = mysqli_query($con,$qry);
-
-if(mysqli_num_rows($run)<1)
+if(mysqli_num_rows($run) < 1)
 {
 echo "<tr><td colspan='5'>No Records Found</td></tr>";
 }
